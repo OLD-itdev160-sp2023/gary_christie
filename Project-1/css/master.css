@@ -1,0 +1,33 @@
+body {
+    background-color: #16A59F ;
+}
+
+main{
+    background-color: #C2F4F3 ;
+}
+ 
+footer{
+    background-color: #94C8C6 ;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    background-color: #16A59F;
+    padding: 1em 1em;
+
+}
+
+li a:hover{
+    background-color: #94C8C6;
+}
