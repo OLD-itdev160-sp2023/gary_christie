@@ -1,17 +1,79 @@
-const Questions = ["For paragraphs you mainly use Which element?","How do you create a division with an element?",
-"What is the purpose of the numbers in the h elements?","Which of these is not a Selector in CSS",
-"Which of these is not a datatype in JavaScript?","How do you do a Multi-line comment in javascript","Which attribute do you give an event to allow a Html element to be clicked?"];
 
-const Answers1 = ["d","div","To organize headers in Order",".class","Booleaan","*//*","Click"];
+const Questions =   [
+    {
+        question: "For paragraphs you mainly use which element?",
+        answers: ["d","r","par","p"],
+        rightAnswer:"p"
+    },
+    
+    {
+        question: "How do you create a division with an element?",
+        answers: ["div", "br", "divide", "d"],
+        rightAnswer: "div"
+    },
+    
+    {
+        question: "What is the purpose of the numbers in the h element?",
+        answers: ["To organize the headers in order", "Change the fonts size based on importance", "To change the style of headers", "There is no purpose to the numbers",],
+        rightAnswer: "Change the font size based on importance"
+    },
 
-const Answers2 = ["r","br","Change the font Size of headers based importance","#id","Int","/**/","Onclick"];
+    {
+        question: "Which of these is not a css selector?",
+        answers: [".class", "#id", "*", "//"],
+        rightAnswer: "//"
+    },
 
-const Answers3 = ["Par","divide","To change the style of headers","*","Number","//","Clickon"];
+    {
+        question: "Which of these is not a datatype in JavaScript?",
+        answers: ["boolean", "int", "number", "nulll"],
+        rightAnswer: "int"
+    },
 
-const Answers4 = ["p","d","There is no purpose for the numbers","//","Null","*\\*","Clickable"];
+    {
+        question: "How do you create a multiline comment in JavaScript?",
+        answers: ["*//*", "/**/", "//", "*\\*"],
+        rightAnswer: "*//*"
+    },
 
-document.getElementById("Question").innerHTML = Questions[0];
-document.getElementById("A1").innerHTML = Answers1[0];
-document.getElementById("A2").innerHTML = Answers2[0];
-document.getElementById("A3").innerHTML = Answers3[0];
-document.getElementById("A4").innerHTML = Answers4[0]; 
+    {
+        question: "Which attribute do you give an event to allow a html element to be clicked?",
+        answers: ["click", "onclick", "clickon", "clickable"],
+        rightAnswer: "onclick"
+    }
+                    ];
+const jSQuestions = document.querySelector(".quiz-Questions");
+const jSAnswers = document.querySelector(".quiz-Answers");
+
+var index = 0;
+
+function quizQuestion(index){
+
+    var question = document.createElement("div");
+    question.className = "question";
+    question.textContent = jSQuestions[index].question;
+    jSQuestions.append(question);
+    var answers = jSQuestions[index].answers;
+
+        for (var index = 0; index <= 3; index++) {
+        var answer = document.createElement("div");
+        answer.classList.add(answer, answer-hover);
+        
+
+        if (answer.textContent = jSQuestions[index].answers){
+            answer.classList.add("answer-correct");
+            }
+        jSAnswers.append(answer);
+        answer.addEventListener("click",checkAnswer);
+        }
+}
+
+quizQuestion(id);
+
+function checkAnswer(event){
+    const answers = document.querySelectorAll(".answer");
+        for (var index = 0; index < answers.length; index++){
+            answers[index].classList.remove("answer-hover");
+            answers[index].removeEventListener("click", checkAnswer)
+        }
+}
