@@ -1,0 +1,47 @@
+
+
+header{
+height: 5em;
+}
+
+footer{
+height: 5em;
+}
+
+#Question{
+height: 5em;
+}
+button{
+    float: left;
+}
+#A1{
+height: 2em;
+width: 2em;
+margin: 2em;
+padding: 2em;
+float: left;
+}
+
+#A2{
+height: 2em;
+width: 2em;
+margin: 2em;
+padding: 2em;
+float: left;
+}
+
+#A3{
+height: 2em;
+width: 2em;
+margin: 2em;
+padding: 2em;
+float: left;
+}
+
+#A4{
+height: 2em;
+width: 2em;
+margin: 2em;
+padding: 2em;
+float: left;
+}
