@@ -5,22 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a href="PC.html">Pc Games</a></li>
-            <li><a href="Playstation.html">Playstation Games</a></li>
-            <li><a href="Switch.html">Switch Games</a></li>     
+            <li><a class= "buttons" href="PC.html">Pc Games</a></li>
+            <li><a class= "buttons" href="Playstation.html">Playstation Games</a></li>
+            <li><a class= "buttons" href="Switch.html">Switch Games</a></li>     
         </ul>
     </header>
     <Main>
-            <h1>Catalog of Games</h1>
-            <p>This a site for keeping track the games i own and the devices they are on.</p>
+            <h1>Cataloge of Games</h1>
+            <h3 id = "desc" ></h3>
+            <p id = "directions"></p>
+            <h3>Memo</h3>
+            <Section id="memo-container" class="memo"></Section>
+            <Section>
+                <input type="text" id="memo-input">
+                <button id="add-memo">Add Memo</button>
+            </Section>
     </Main>
     <footer>
-        <p>Gary Christie</p>
+        <div class= "background">
+        <p id= "footer"></p>
+        </div>
+        <script src="js/scripts.js" charset="UTF-8"></script>
     </footer>
 </body>
 </html>
